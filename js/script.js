@@ -9,7 +9,6 @@ const kanban = new jKanban({
 
 function addFormElement( id ) {
 
-
     const formItem = document.createElement('form');
 
 
@@ -27,5 +26,4 @@ function addFormElement( id ) {
       //フォーム要素を非表示にするため削除
       formItem.parentNode.removeChild(formItem);
     })
-
 }

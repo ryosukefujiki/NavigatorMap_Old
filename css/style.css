@@ -1,3 +1,32 @@
+.header{
+  width: 100%;
+  background: #9b9b9b;
+  color: #ffffff;
+  height: 40px;
+  overflow: hidden;
+}
+
+.header .header__heading{
+  float: left;
+  margin-top: 10px;
+  margin-left: 18px;
+  font-size: 18px;
+}
+
+.header__addBoardButton{
+  float: right;
+  margin-top: 10px;
+  margin-right: 18px;
+}
+
+
+
+.kanban{
+  margin-top: 60px;
+}
+
+
+
 .task {
   background-color: #F4CE46;
 }

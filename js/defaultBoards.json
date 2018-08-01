@@ -2,30 +2,12 @@ const defaultBoards = [{
     "id": "sample-board-1",
     "title": "タスク",
     "class": "task",
-    "item": [{
-        "title": "報告書の作成"
-    }, {
-        "title": "14時から打ち合わせ"
-    }]
 }, {
     "id": "sample-board-2",
     "title": "進行中",
     "class": "progress",
-    "item": [{
-        "title": "○○案の企画書作成"
-    }]
 }, {
     "id": "sample-board-3",
     "title": "完了",
     "class": "done",
-    "item": [{
-        "title": "日報の提出"
-    }]
-}, {
-  "id": "sample-board-4",
-  "title": "完了２",
-  "class": "done",
-  "item": [{
-        "title": "日報の記載"
-    }]
 }];
