@@ -24,16 +24,17 @@
 .kanban{
   overflow: scroll;
   margin-top: 60px;
+  padding-bottom: 200px;
 }
 
 
 
-.task {
+.yellow {
   background-color: #F4CE46;
 }
-.progress {
+.blue {
   background-color: #2A92BF;
 }
-.done {
+.green {
   background-color: #00B961;
 }

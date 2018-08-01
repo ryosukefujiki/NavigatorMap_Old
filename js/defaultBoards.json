@@ -1,13 +1,13 @@
 const defaultBoards = [{
-    "id": "sample-board-1",
+    "id": "board-1",
     "title": "タスク",
-    "class": "task",
+    "class": "yellow",
 }, {
-    "id": "sample-board-2",
+    "id": "board-2",
     "title": "進行中",
-    "class": "progress",
+    "class": "blue",
 }, {
-    "id": "sample-board-3",
+    "id": "board-3",
     "title": "完了",
-    "class": "done",
+    "class": "green",
 }];

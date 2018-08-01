@@ -1,34 +1,50 @@
 const kanban = new jKanban({
-    element: '#myKanban', //タスク管理ボードを表示させたいHTML要素
-    gutter: '15px', //ボード同士の間隔
-    widthBoard: '250px', //ボードのサイズ
-    boards: defaultBoards, //初期状態のボードの中身をJSONで指定
+    element: '#myKanban',
+    gutter: '15px',
+    widthBoard: '250px',
+    boards: defaultBoards,
     addItemButton   : true,
     buttonClick: (elem, id) => addFormElement(id)
 });
 
+
+var addBoardButton = document.getElementById("AddBoardButton");
+var idNumber = 3;
+
+addBoardButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    var TitleName = document.getElementById("BoardTitle").value;
+    var ColorName = document.getElementById("BoardColor").value;
+    if(TitleName != "" && ColorName != ""){
+      console.log(TitleName);
+      addBoardItem(TitleName,ColorName);
+    }
+    document.getElementById("BoardTitle").value = "";
+    document.getElementById("BoardColor").value = "";
+});
+
+
+
+function addBoardItem(title,color){
+  idNumber++;
+  idName = "board-" + String(idNumber);
+  titleName = title;
+  colorName = color;
+  const addedBoard = [{
+      "id": idName,
+      "title": titleName,
+      "class": colorName,
+  }];
+  kanban.addBoards(addedBoard);
+}
+
 function addFormElement( id ) {
-
     const formItem = document.createElement('form');
-
-    const addedBoard = [{
-        "id": "sample-board-4",
-        "title": "完了やで",
-        "class": "done2",
-    }];
-
     formItem.innerHTML = '<input type="text">';
     kanban.addForm( id, formItem );
-
     formItem.addEventListener('submit', (e) => {
       e.preventDefault();
-
-
-      //入力された「タスク」をボードに登録
       kanban.addElement(id, {"title": e.target[0].value});
-      kanban.addBoards(addedBoard);
-
-      //フォーム要素を非表示にするため削除
       formItem.parentNode.removeChild(formItem);
     })
 }
