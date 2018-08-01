@@ -11,6 +11,11 @@ function addFormElement( id ) {
 
     const formItem = document.createElement('form');
 
+    const addedBoard = [{
+        "id": "sample-board-4",
+        "title": "完了やで",
+        "class": "done2",
+    }];
 
     formItem.innerHTML = '<input type="text">';
     kanban.addForm( id, formItem );
@@ -21,7 +26,7 @@ function addFormElement( id ) {
 
       //入力された「タスク」をボードに登録
       kanban.addElement(id, {"title": e.target[0].value});
-
+      kanban.addBoards(addedBoard);
 
       //フォーム要素を非表示にするため削除
       formItem.parentNode.removeChild(formItem);
